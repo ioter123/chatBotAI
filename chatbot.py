@@ -1,31 +1,12 @@
 from openai import OpenAI
 
-#
-# def ai_chat(message):
-#     client = OpenAI(
-#         api_key='sk-w6B51885ldKTZWeb1GVfRojvZ-RlJ3JOmYnDxzFP8kT3BlbkFJWjcCEIFOLFPnZYXGLMHKTjTWvBZ9NPxGyLbGJR-3sA',
-#     )
-#     total_message = [
-#         {
-#             "role": "system",
-#             "content": "질문자의 상황에 적합한 캐릭터를 추천해주는 전문가야. 대답은 항상 한글로 해줘."
-#         }
-#     ]
-#     total_message += message
-#     completion = client.chat.completions.create(
-#         model="gpt-4o",
-#         messages=total_message
-#     )
-#
-#     return total_message + [{'role':'assistant', 'content': completion.choices[0].message.content}]
-
 
 # 챗봇 클래스
 class ChatBot():
     def __init__(self, model='gpt-4o'):
         # api key 입력
         self.client = OpenAI(
-            api_key='sk-w6B51885ldKTZWeb1GVfRojvZ-RlJ3JOmYnDxzFP8kT3BlbkFJWjcCEIFOLFPnZYXGLMHKTjTWvBZ9NPxGyLbGJR-3sA',
+            api_key='', # 직접 입력하시면 되고 키 필요하시면 말씀해주시면 제 개인키라도 별도로 알려드리겠습니다.
         )
         # ChatGPT 모델
         self.model = model
